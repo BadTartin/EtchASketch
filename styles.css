@@ -1,0 +1,90 @@
+/* * {
+    border: 2px solid red;
+} */
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(199, 220, 226);
+    /* align-items: flex-start; */
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 60px;
+    margin-bottom: -15px;
+    margin-top: 5px;
+}
+
+.controltitle {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.gridcontainer {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    background-color: white;
+    border: 24px solid rgb(214, 114, 114);
+    border-radius: 6px;
+    margin-right: 128px;
+    margin-left: 256px;
+    box-shadow: 0.2em 0.2em 0.2em 0 inset, -0.2em -0.2em 0.2em 0 inset;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    margin: 1px;
+    justify-content: center;
+    
+    
+}
+
+.controlborder {
+    border: 10px solid grey;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    /* box-shadow: inset 0.2em 0.2em 0.2em 0, inset -0.2em -0.2em 0.2em 0; */
+    background-color:rgb(148, 199, 213);
+    border-style: outset;
+}
+
+button {
+    width: 60px;
+    margin: 5px;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#input-color {
+  width: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.footer-link {
+    font-weight: bold;
+}

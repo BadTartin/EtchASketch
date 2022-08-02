@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Etch-A-Sketch</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h2>Sketch Pad</h2>
+        <div class="main">
+        
+            <div class="controls">
+                <h3 class="controltitle">Controls</h3>
+                <div class="controlborder">
+                    <label for="gridsize">Grid Size:</label>
+                    <input type="text" id="gridsize" size="4" value="16"> 
+                    <button class="updatesize" onclick="updateValue()">Submit</button>
+                    <p>Mode:</p>
+                    <button class="black">Black Pen</button>
+                    <button class="shading">Black Shading</button>
+                    <button class="random">Random Colors</button>
+                    <button class="picker">Pick a Color <input type="color" value="#ff0000" id="input-color"></button>
+                    <button class="erase">Erase</button>
+                </div>
+            </div>
+            <div class="gridcontainer"></div>
+        </div>
+        <footer>Built by
+            <a class="footer-link" href="https://github.com/BadTartin/" target="_blank">BadTartin</a> 
+            |
+            <a class="footer-link" href="https://github.com/BadTartin/EtchASketch"  target="_blank">Source</a> 
+        </footer>
+        
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
+
