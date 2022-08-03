@@ -26,64 +26,11 @@ function random_rgba() {
 }
 
 let userColor = '';
-// const colorInput = document.querySelector("#input-color");
-// colorInput.addEventListener("click", () => {userColor = colorInput.value;})
 
 const colorInput = document.querySelector('#input-color');
 colorInput.addEventListener('input', () => {
     userColor = colorInput.value;
 });
-
-// const userColorChosen = document.querySelector('#input-color');
-// userColorChosen.addEventListener('input', function () {
-//     userColor = userColorChosen.value;
-// });
-
-// function shading_rgba() {
-//     col = window.getComputedStyle(this);
-//     var rgbVal = col.backgroundColor.split(/[()]+/)[1];
-//     // console.log(this) ;
-//     // console.log(this.style.backgroundColor)
-//     // console.log(this.alpha);
-//     // if (this == '0, 0, 0, 0') {
-//     //     return 'rgba(' + '0, 0, 0, .1'+ ')';
-//         // console.log('match');
-//     }
-//     // else {return 'rgba(0, 100, 1, .5)';}
-    
-    
-// // }
-
-// function tileColor () {
-//     if (isDown) {
-//         if (mode == 'black') {
-//             this.style.backgroundColor="black";}
-//         else if (mode == 'white') {
-//             this.style.backgroundColor="white";}
-//         else if (mode == 'random') {
-//             this.style.backgroundColor=random_rgba();}
-//         else if (mode == 'picker') {
-//             console.log('random');
-
-//             }
-//         else if (mode == 'shading') {
-//             var col = window.getComputedStyle(this);
-            
-//             var rgbVal = col.backgroundColor.split(/[()]+/)[1].split(',');
-            
-//             if (rgbVal[0].trim() == '0' && rgbVal[1].trim() == '0' &&
-//               rgbVal[2].trim() == '0') {
-
-//             var rgbStr = 'rgba(' + rgbVal[0] + ',' + rgbVal[1] + ',' +
-//               rgbVal[2] + ', ' + String(Number(rgbVal[3])+.1) + ')';
-             
-//             this.style.backgroundColor = rgbStr;
-//             }
-//             else { this.style.backgroundColor = 'rgba(0, 0, 0, 0)'; }
-//         }
-        
-//     }
-// }
 
 
 function tileColor () {
@@ -95,8 +42,7 @@ function tileColor () {
               break;
             case 'random': this.style.backgroundColor=random_rgba();
               break;
-            case 'picker': 
-              this.style.backgroundColor=userColor;
+            case 'picker': this.style.backgroundColor=userColor;
               break;
             case 'shading': 
                 var col = window.getComputedStyle(this);
@@ -115,14 +61,6 @@ function tileColor () {
             }
         }
     }
-
-
-// function tileColor() {
-//     let alphaString = "rgba(0, 0, 0, " + alpha + ")";
-//     alpha += 0.1;
-// this.style.backgroundColor = alphaString;
-//  }
-
 
 // track whether mouse button is clicked down or not
 var isDown = false;
@@ -143,29 +81,8 @@ function createGrid () {
         () => isDown = true);
         tile.addEventListener('mouseup', () => isDown = false);
         tile.addEventListener('mouseover', tileColor);
-        // tile.addEventListener('mouseover', getColor);
     });
 }
-
-
-// function getColor () {
-//     col = window.getComputedStyle(this);
-//     var rgbVal = col.backgroundColor.split(/[()]+/)[1];
-//     console.log(rgbVal) ;
-//     rgbVal == '0, 0, 0, 0';
-//         // return 'rgba(' + '0, 0, 0, .1'+ ')';
-//     //     return 'rgba(0, 0, 0, .5)'
-//     // }
-//     // else {return 'rgba(0, 100, 1, .5)';}
-    
-    
-// }
-
-
-// const compStyles = window.getComputedStyle(".tile");
-// console.log(compStyles);
-
-
 
 createGrid();
 
@@ -187,22 +104,3 @@ function updateValue () {
     createGrid();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// set up buttons to update tileColor function -
-// make black, make white, make randomcolor, increase saturation 10%
-
-
