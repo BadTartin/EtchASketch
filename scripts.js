@@ -3,6 +3,8 @@ const gridcontainer = document.querySelector(".gridcontainer");
 
 // define initial resolution of grid
 var gridSize = 16;
+
+// buttons to change drawing mode
 var mode = "black"
 
 const black = document.querySelector(".black");
@@ -20,18 +22,19 @@ shading.addEventListener("click", () => {mode = "shading"})
 const pickcolor = document.querySelector(".picker");
 pickcolor.addEventListener("click", () => {mode = "picker"})
 
-function random_rgba() {
-    var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
-}
-
 let userColor = '';
-
 const colorInput = document.querySelector('#input-color');
 colorInput.addEventListener('input', () => {
     userColor = colorInput.value;
 });
 
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+
+// track whether mouse button is clicked down or not
+var isDown = false;
 
 function tileColor () {
     if (isDown) {
@@ -61,9 +64,6 @@ function tileColor () {
             }
         }
     }
-
-// track whether mouse button is clicked down or not
-var isDown = false;
 
 // create grid tiles
 function createGrid () {
